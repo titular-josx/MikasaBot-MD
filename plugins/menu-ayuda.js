@@ -18,7 +18,7 @@ let msg = generateWAMessageFromContent(m.chat, {
             text: "https://whatsapp.com/channel/0029VajUEsCB4hdNTg04zh1u"
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "𝘈𝘊𝘓𝘈𝘙𝘈𝘊𝘐Ó𝘕: 𝘌𝘚𝘛𝘌 𝘉𝘖𝘛 𝘗𝘌𝘙𝘚𝘖𝘕𝘈𝘓𝘐𝘡𝘈𝘋𝘖 𝘕𝘖 𝘛𝘐𝘌𝘕𝘌 𝘓𝘐𝘊𝘌𝘕𝘊𝘐𝘈 𝘋𝘌 𝘗𝘌𝘙𝘔𝘐𝘚𝘖 𝘋𝘌 𝘝𝘌𝘕𝘛𝘈𝘚. 𝘜𝘕𝘐𝘊𝘖 𝘝𝘌𝘕𝘋𝘌𝘋𝘖𝘙 𝘌𝘚 𝘌𝘓 𝘖𝘞𝘕𝘌𝘙.\n𝘖𝘞𝘕𝘌𝘙: +51 936732723"
+            text: ""
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "𝑪𝑨𝑵𝑨𝑳 𝑶𝑭𝑰𝑪𝑰𝑨𝑳 𝑫𝑬 𝑴𝑰𝑲𝑨𝑺𝑨 𝑩𝑶𝑻",
