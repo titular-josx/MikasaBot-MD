@@ -9,50 +9,18 @@ var handler = async (m, { conn, usedPrefix }) => {
           deviceListMetadata: {},
           deviceListMetadataVersion: 2
         },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: "Selecciona una opción del menú:"
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "> 𝘾𝙧𝙚𝙖𝙙𝙤𝙧: 𝘈𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n> 𝙑𝙚𝙧𝙨𝙞𝙤𝙣:  _3.3.1_\n> 𝙄𝙜: @𝘶𝘴𝘹𝘳_𝘢𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n> 𝙒𝙖: wa.me/59897246324\n> 𝘚𝘪 𝘩𝘢𝘺 𝘢𝘭𝘨𝘶𝘯 𝘦𝘳𝘳𝘰𝘳 𝘳𝘦𝘱𝘰𝘳𝘵𝘦𝘭𝘰 𝘢𝘭 𝘤𝘳𝘦𝘢𝘥𝘰𝘳 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘰𝘮𝘢𝘯𝘥𝘰 #𝙧𝙚𝙥𝙤𝙧𝙩𝙚 𝘱𝘢𝘳𝘢 𝘴𝘰𝘭𝘶𝘤𝘪𝘰𝘯𝘢𝘳𝘭𝘰\n\n> GRACIAS 🫶🏻"
-          }),
-          header: proto.Message.InteractiveMessage.Header.create({
-            title: "🔮 𝙃𝙤𝙡𝙖 𝙨𝙤𝙮 𝙓𝙞𝘼𝘽𝙤𝙩-𝙋𝙧𝙤",
-            subtitle: "",
-            hasMediaAttachment: true,
-            media: {
-              url: "https://th.bing.com/th/id/OIG2.6DYzgwS1ijLpt6wLkkQm?w=1024&h=1024&rs=1&pid=ImgDetMain",
-              mimetype: "image/jpeg"
-            }
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons: [
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".allmenu\",\"id\":\"message\"}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menuff\",\"id\":\"message\"}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menuaudios\",\"id\":\"message\"}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".labiblia\",\"id\":\"message\"}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menuanime\",\"id\":\"message\"}"
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": "{\"display_text\":\".menujuegos\",\"id\":\"message\"}"
-              }
-            ]
-          })
+        buttonsMessage: proto.Message.ButtonsMessage.create({
+          contentText: "Selecciona una opción del menú:",
+          footerText: "> 𝘾𝙧𝙚𝙖𝙙𝙤𝙧: 𝘈𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n> 𝙑𝙚𝙧𝙨𝙞𝙤𝙣:  _3.3.1_\n> 𝙄𝙜: @𝘶𝘴𝘹𝘳_𝘢𝘯𝘨𝘦𝘭𝘪𝘵𝘰\n> 𝙒𝙖: wa.me/59897246324\n> 𝘚𝘪 𝘩𝘢𝘺 𝘢𝘭𝘨𝘶𝘯 𝘦𝘳𝘳𝘰𝘳 𝘳𝘦𝘱𝘰𝘳𝘵𝘦𝘭𝘰 𝘢𝘭 𝘤𝘳𝘦𝘢𝘥𝘰𝘳 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘰𝘮𝘢𝘯𝘥𝘰 #𝙧𝙚𝙥𝙤𝙧𝙩𝙚 𝘱𝘢𝘳𝘢 𝘴𝘰𝘭𝘶𝘤𝘪𝘰𝘯𝘢𝘳𝘭𝘰\n\n> GRACIAS 🫶🏻",
+          buttons: [
+            { buttonId: '.allmenu', buttonText: { displayText: 'All Menu' }, type: 1 },
+            { buttonId: '.menuff', buttonText: { displayText: 'Menu FF' }, type: 1 },
+            { buttonId: '.menuaudios', buttonText: { displayText: 'Menu Audios' }, type: 1 },
+            { buttonId: '.labiblia', buttonText: { displayText: 'La Biblia' }, type: 1 },
+            { buttonId: '.menuanime', buttonText: { displayText: 'Menu Anime' }, type: 1 },
+            { buttonId: '.menujuegos', buttonText: { displayText: 'Menu Juegos' }, type: 1 }
+          ],
+          headerType: 1
         })
       }
     }
