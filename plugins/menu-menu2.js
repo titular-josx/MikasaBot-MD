@@ -1,7 +1,9 @@
-const handler = async (m, {conn, command, usedPrefix}) => {
+import { getName } from './lib/functions.js'; // Asegúrate de que la ruta sea correcta
+import { sendButton } from './lib/whatsapp.js'; // Asegúrate de que la ruta sea correcta
+
+const handler = async (m, { conn, command, usedPrefix }) => {
   let image = 'https://telegra.ph/file/fe190c9ca575ab19161e9.jpg';
-  m.react('🌸');
-  let name = await conn.getName(m.sender);
+  let name = await getName(m.sender);
   let uptime = process.uptime() * 1000;
   let uptimeString;
   if (process.uptime) {
@@ -18,8 +20,9 @@ const handler = async (m, {conn, command, usedPrefix}) => {
 🌸 𝘉𝘰𝘵 𝘦𝘯 𝘥𝘦𝘴𝘢𝘳𝘳𝘰𝘭𝘭𝘰 🌸
 🌸 𝘚𝘪𝘨𝘶𝘦𝘮𝘦 𝘦𝘯 𝘮𝘪 𝘤𝘢𝘯𝘢𝘭 🌸
 `;
-  await conn.sendButton(m.chat, message, 'info', image, [['📚 Menu 📚', '.allmenu'], ['🫅 Creador 🫅', '.owner']], null, [['🌸 Canal 🌸', fgcanal]], m);
+  await sendButton(m.chat, message, 'info', image, [['📚 Menu 📚', '.allmenu'], ['🫅 Creador 🫅', '.owner']], null, [['🌸 Canal 🌸', fgcanal]], m);
 };
+
 handler.help = ['menu4'];
 handler.tags = ['info4'];
 handler.command = /^(menu4?)$/i;
