@@ -1,16 +1,1 @@
-
-let handler = async (m, { conn, text, participants}) => {
-	
-    let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-    if (!m.quoted) throw `🏴 ${mssg.reply}`
-    conn.sendMessage(m.chat, { forward: m.quoted.fakeObj, mentions: users } )
-}
-
-handler.help = ['totag']
-handler.tags = ['group']
-handler.command = /^(totag|tag)$/i
-
-handler.admin = true
-handler.group = true
-
-export default handler
+var _0x4f2b=['map','id','filter','jid','quoted','throw','reply','sendMessage','chat','forward','fakeObj','mentions','help','totag','tags','group','command','admin','true','export','default'];(function(_0x2e4c7b,_0x4f2b2b){var _0x3b8c6e=function(_0x2e4c7b){while(--_0x2e4c7b){_0x2e4c7b'push');}};_0x3b8c6e(++_0x4f2b2b);}(_0x4f2b,0x1b4));var _0x3b8c=function(_0x2e4c7b,_0x4f2b2b){_0x2e4c7b=_0x2e4c7b-0x0;var _0x3b8c6e=_0x4f2b[_0x2e4c7b];return _0x3b8c6e;};let handler=async(m,{conn,text,participants})=>{let users=participants_0x3b8c('0x0'))_0x3b8c('0x2')]);if(!m[_0x3b8c('0x4')])_0x3b8c('0x5')(`🏴 ${mssg[_0x3b8c('0x6')]}`);conn_0x3b8c('0x7')],{'forward':m[_0x3b8c('0x9')][_0x3b8c('0xa')],'mentions':users});};handler[_0x3b8c('0xb')]=[_0x3b8c('0xc')];handler[_0x3b8c('0xd')]=[_0x3b8c('0xe')];handler[_0x3b8c('0xf')]=/^(totag|tag)$/i;handler[_0x3b8c('0x10')]=!![];handler[_0x3b8c('0x11')]=!![];_0x3b8c('0x12')[_0x3b8c('0x13')]=handler;
